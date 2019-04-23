@@ -1,0 +1,247 @@
+body{
+    margin: 0;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+header,footer {
+    background-color:#00347D;
+    color: white; 
+}
+header,main,.article__info,footer{
+    padding: 10px 40px 10px 40px;
+}
+button{
+    border-radius: 5px;
+}
+.header__Top {
+    display: flex;
+}
+.div__logo{
+    width: 50%;
+}
+.div__icons{
+    display:flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+.header__logo{
+    height: 30px;
+}
+.icons{
+    margin-right: 10px;
+}
+.header__buttons  button{
+    font-weight: bold;
+    height: 30px;
+    margin-left: 10px;   
+}
+.header__bottom{
+    width: 60%;
+}
+.header__button button{
+    background-color: #1584d0;
+    border-color:  #1584d0;
+    color: white;
+    height: 40px;
+    width: 150px;
+    margin-bottom: 16px;
+}
+main{
+    line-height: 160%;
+}
+.h3__a  a{
+    color:#1584d0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-decoration-line:none;
+    margin-left: 20px; 
+}
+.main__elem{
+    margin-bottom: 30px;
+}
+.block{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.elem {
+    max-width: 24%;
+    border: 1px rgb(230, 228, 228) solid;
+    box-sizing: border-box;
+    box-shadow: 1px 1px #ffffff;
+    border-radius: 5px;
+    position: relative;
+    transition: transform .5s;
+    backface-visibility: hidden;
+    margin-bottom: 10px;
+}
+.elem img{
+    max-width: 100%;
+}
+.elem  p {
+    margin: 10px;
+}
+.elem__price {
+    font-weight: bold;
+}
+.elem__oldprice{
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-decoration-line: line-through;
+    color:#b9b9b9;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.elem .elem__offer{
+    position: absolute;
+    top:0;
+    right: 10%;
+    color:white;
+    background-color: rgb(255, 145, 0);
+    padding: 5px;
+    margin: 0px;
+    font-size: 0.8rem;
+}
+.elem:hover{
+        transform: scale(1.05);
+}
+.favourite .elem{
+    width: 15%;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.favourite .elem:nth-child(6n+1){
+    background-color: #1584d0;
+}
+.favourite .elem:nth-child(6n+2){
+    background-color: #2f527a;
+}
+.favourite .elem:nth-child(6n+3){
+    background-color: #60507d;
+}
+.favourite .elem:nth-child(6n+4){
+    background-color: #964b7e;
+}
+.favourite .elem:nth-child(6n+5){
+    background-color: #bb4a83;
+}
+.favourite .elem:nth-child(6n+6){
+    background-color: #bc4e5f;
+}
+.elem .elem__p--bold {
+    font-weight: bold;
+}
+.favourite .elem__p {
+    opacity: 0;
+    transition: 0.5s;
+}
+.favourite .elem:hover .elem__p{
+    opacity: 1;
+}
+.img--big img{
+    width: 100%;
+}
+.main__elem--inline{
+    display: flex;
+    justify-content: space-between;
+}
+#article__info{
+    width: 60%;
+}
+#article__price{
+    width: 35%;
+    padding-right: 0;
+}
+.article__praices{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: rgb(224, 224, 224) 1px solid;
+}
+.article__buttons {
+    display: flex;
+    justify-content:space-between;
+}
+.article__buttons button{
+    width: 49%;
+    height: 45px;
+    color: #1584d0;
+    border-color:  #1584d0;
+    box-sizing: border-box;
+    background-color: white;
+}
+.article__buttons--blue button{
+    color: white;
+    background-color: #1584d0;
+}
+.article__q{
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    color: #1584d0;
+    font-size: 0.8rem;
+    padding: 30px;
+}
+.footer__links > a{
+    color: white;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .main__elem--inline{
+        display: flex;
+        flex-direction: column;
+    }
+    #article__info{
+        width: 100%;
+    }
+    #article__price{
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .elem {
+        max-width: 49%;
+        margin-bottom: 10px;
+    }
+    .favourite .elem{
+        width: 33%;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .elem {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .favourite .elem{
+        width: 49%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header__Top {
+        flex-direction: column;
+    }
+    .div__logo{
+        width: 100%;
+    }
+    .div__icons{
+        display:flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .header__bottom{
+        width: 100%;
+    }
+}
